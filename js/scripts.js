@@ -2,10 +2,8 @@ $(document).ready(function() {
 
   //Current date
   var d = new Date();
-
   var month = d.getMonth()+1;
   var day = d.getDate();
-
   var output =
       ((''+month).length<2 ? '0' : '') + month + '/' +
       ((''+day).length<2 ? '0' : '') + day + '/' + d.getFullYear();
@@ -16,33 +14,17 @@ $(document).ready(function() {
   $(".submit").click(function(event){
       event.preventDefault();
 
-      var email = $("#email").val();
-      $(".email").text(email);
+      //initialize array
+      var setting = ["email", "name", "address1", "address2", "city", "state", "country", "zipcode", "shirtSize"];
 
-      var name = $("#name").val();
-      $(".name").text(name);
+      //set all necessary elements
+      setting.forEach(function(blank) {
+        var userInput = $("#" + blank).val();
+        $("." + blank).text(userInput);
+      });
 
-      var address1 = $("#address1").val();
-      $(".address1").text(address1);
-
-      var address2 = $("#address2").val();
-      $(".address2").text(address2);
-
-      var city = $("#city").val();
-      $(".city").text(city);
-
-      var state = $("#state").val();
-      $(".state").text(state);
-
-      var country = $("#country").val();
-      $(".country").text(country);
-
-      var zipCode = $("#zipCode").val();
-      $(".zipCode").text(zipCode);
-
-      var shirtSize = $("#shirtSize").val();
-      $(".shirtSize").text(shirtSize);
-
+      $(".form").hide();
+      $(".receiptArea").show();
   });
 
 });
