@@ -1,25 +1,6 @@
-
-
-//Select Boxes
-var beverage = $("#beverage").val();
-
-//Radio Buttons
-var flavor = $("input:radio[name=flavor]:checked").val();
-
-//Checkboxes
-//we will cover this
-
-//Date
-var dob = $("#born").val();
-
-//Color
-var favoriteColor = $("#color").val();
-
-
 $(document).ready(function() {
 
-
-
+  //Current date
   var d = new Date();
 
   var month = d.getMonth()+1;
@@ -56,8 +37,12 @@ $(document).ready(function() {
       var country = $("#country").val();
       $(".country").text(country);
 
-      /*$(".form").hide();
-      $(".receiptArea").show();*/
+      var zipCode = $("#zipCode").val();
+      $(".zipCode").text(zipCode);
+
+      var shirtSize = $("#shirtSize").val();
+      $(".shirtSize").text(shirtSize);
+
   });
 
 });
