@@ -1,3 +1,5 @@
+
+
 //Select Boxes
 var beverage = $("#beverage").val();
 
@@ -12,3 +14,13 @@ var dob = $("#born").val();
 
 //Color
 var favoriteColor = $("#color").val();
+
+
+$(document).ready(function() {
+  $("input").click(function(event){
+      event.preventDefault();
+      $(".form").hide();
+      $(".receiptArea").show();
+  });
+
+});
