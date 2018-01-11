@@ -1,3 +1,9 @@
+.container {
+  margin-top: 25px;
+  padding: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 form p {
   font-weight: bold;
   margin-top: 20px;
@@ -22,4 +28,13 @@ input {
 
 .receiptArea {
   display: none;
-};
+}
+
+.bluegold {
+  width: 100%;
+  margin-top: 25%;
+}
+
+.bluegold2 {
+  display: none;
+}
